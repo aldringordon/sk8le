@@ -12,8 +12,8 @@ export const trickData = [
     {stance:"Fakie",    shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"1", spin:"Bs",      spinRotation:"180", trickName:"Fakie Heel"},
     {stance:"Fakie",    shuv:"Bs",      shuvRotation:"180", flip:"None",        flipAmount:"0", spin:"Bs",      spinRotation:"180", trickName:"Fakie Bigspin"},
     {stance:"Fakie",    shuv:"Fs",      shuvRotation:"180", flip:"None",        flipAmount:"0", spin:"Fs",      spinRotation:"180", trickName:"Fakie Fs Bigspin"},
-    {stance:"Switch",   shuv:"None",    shuvRotation:"180", flip:"Kickflip",    flipAmount:"1", spin:"None",    spinRotation:"0",   trickName:"Fakie Fs Bigspin"},
-    {stance:"Switch",   shuv:"None",    shuvRotation:"180", flip:"Heelflip",    flipAmount:"1", spin:"None",    spinRotation:"0",   trickName:"Fakie Fs Bigspin"},
-    {stance:"Switch",   shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1", spin:"Fs",      spinRotation:"180", trickName:"Fakie Fs Bigspin"},
-    {stance:"Switch",   shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1", spin:"Bs",      spinRotation:"180", trickName:"Fakie Fs Bigspin"},
+    {stance:"Switch",   shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1", spin:"None",    spinRotation:"0",   trickName:"Switch Flip"},
+    {stance:"Switch",   shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"1", spin:"None",    spinRotation:"0",   trickName:"Switch Heel"},
+    {stance:"Switch",   shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1", spin:"Fs",      spinRotation:"180", trickName:"Switch Fs Flip"},
+    {stance:"Switch",   shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1", spin:"Bs",      spinRotation:"180", trickName:"Switch Bs Flip"},
 ]

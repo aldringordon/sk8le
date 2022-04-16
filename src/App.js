@@ -19,7 +19,10 @@ function App() {
         <h1>Sk8le</h1>
       </nav>
 
-      <Search />
+      <div className="search">
+        <Search />
+      </div>
+      
       
 
       <AppContext.Provider value={{ board, setBoard}}>

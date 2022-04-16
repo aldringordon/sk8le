@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   /* display: flex; */
-  color: white;
+  color: #121212;
 }
 
 body {
@@ -36,6 +36,15 @@ nav h1 {
   flex-direction: column;
 }
 
+.search {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
 .App input {
   background-color: #121212;
   margin: 20px;
@@ -44,6 +53,14 @@ nav h1 {
   font-size: 20px;
   color: white;
   border: 1px solid grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.select {
+  width: 500px;
+  display: 'flex';
+  justify-content: center;
+  align-items: center;
 }
 
 .board {

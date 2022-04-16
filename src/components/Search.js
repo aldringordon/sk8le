@@ -9,7 +9,7 @@ function Search() {
     const { board, setBoard, currAttempt, setCurrAttempt, answer } = useContext(AppContext);
 
     const evaluate = (guess) => {
-        if (guess.label == answer.answer.trickName)
+        if (guess.label === answer.answer.trickName)
         {
             const newBoard = [...board];
             newBoard[currAttempt.attempt][0] = "✅";
@@ -27,7 +27,7 @@ function Search() {
             const guessTrick = trickData[guess.value]
             const newBoard = [...board];
 
-            if (guessTrick.stance == answer.answer.stance)
+            if (guessTrick.stance === answer.answer.stance)
             {
                 newBoard[currAttempt.attempt][0] = "✅";
             }
@@ -36,7 +36,7 @@ function Search() {
                 newBoard[currAttempt.attempt][0] = "❌";
             }
 
-            if (guessTrick.shuv == answer.answer.shuv)
+            if (guessTrick.shuv === answer.answer.shuv)
             {
                 newBoard[currAttempt.attempt][1] = "✅";
             }
@@ -45,7 +45,7 @@ function Search() {
                 newBoard[currAttempt.attempt][1] = "❌";
             }
 
-            if (guessTrick.shuvRotation == answer.answer.shuvRotation)
+            if (guessTrick.shuvRotation === answer.answer.shuvRotation)
             {
                 newBoard[currAttempt.attempt][2] = "✅";
             }
@@ -54,7 +54,7 @@ function Search() {
                 newBoard[currAttempt.attempt][2] = "❌";
             }
 
-            if (guessTrick.flip == answer.answer.flip)
+            if (guessTrick.flip === answer.answer.flip)
             {
                 newBoard[currAttempt.attempt][3] = "✅";
             }
@@ -63,7 +63,7 @@ function Search() {
                 newBoard[currAttempt.attempt][3] = "❌";
             }
 
-            if (guessTrick.flipAmount == answer.answer.flipAmount)
+            if (guessTrick.flipAmount === answer.answer.flipAmount)
             {
                 newBoard[currAttempt.attempt][4] = "✅";
             }
@@ -72,7 +72,7 @@ function Search() {
                 newBoard[currAttempt.attempt][4] = "❌";
             }
 
-            if (guessTrick.spin == answer.answer.spin)
+            if (guessTrick.spin === answer.answer.spin)
             {
                 newBoard[currAttempt.attempt][5] = "✅";
             }
@@ -81,7 +81,7 @@ function Search() {
                 newBoard[currAttempt.attempt][5] = "❌";
             }
 
-            if (guessTrick.spinRotation == answer.answer.spinRotation)
+            if (guessTrick.spinRotation === answer.answer.spinRotation)
             {
                 newBoard[currAttempt.attempt][6] = "✅";
             }

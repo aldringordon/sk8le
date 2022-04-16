@@ -15,7 +15,7 @@ function App() {
   
   const[board, setBoard] = useState(boardDefault);
   const[currAttempt, setCurrAttempt] = useState({attempt: 1});
-  const[answer, setAnswer] = useState({answer: trickData[5]})
+  const[answer, setAnswer] = useState({answer: trickData[12]})
 
   return (
     <div className="App">

@@ -101,9 +101,11 @@ function Search() {
 
         const newBoard = [...board];
 
-        newBoard[currAttempt.attempt][7] = trick.label;
-
-        evaluate(trick);
+        if (currAttempt.attempt < 7)
+        {
+            newBoard[currAttempt.attempt][7] = trick.label;
+            evaluate(trick);
+        }
 
         setCurrAttempt({...currAttempt, attempt: currAttempt.attempt + 1});
         setBoard(newBoard);
@@ -118,7 +120,6 @@ function Search() {
             isSearchable
             options={tricks}
             onChange={setTrick}
-        
         />
         
     </div>

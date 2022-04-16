@@ -9,13 +9,14 @@ export const AppContext = createContext();
 // https://www.youtube.com/watch?v=WDTNwmXUz2c&t=240s
 
 function App() {
-
-  const correct = "✅";
-  const incorrect = "❌";
   
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
   const[board, setBoard] = useState(boardDefault);
   const[currAttempt, setCurrAttempt] = useState({attempt: 1});
-  const[answer, setAnswer] = useState({answer: trickData[12]})
+  const[answer, setAnswer] = useState({answer: trickData[getRandomInt(16)]})
 
   return (
     <div className="App">

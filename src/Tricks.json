@@ -1,0 +1,9 @@
+[
+    ["Regular", "None", "None", "Kickflip", "1", "None", "None", "Kickflip"],
+    ["Regular", "None", "None", "Heelflip", "1", "None", "None", "Heelflip"],
+    ["Regular", "Bs", "360", "Kickflip", "1", "None", "None", "360 Flip / Tre Flip"],
+    ["Regular", "Fs", "360", "Heelflip", "1", "None", "None", "Lazer Flip"],
+    ["Nollie", "Fs", "180", "Heelflip", "1", "None", "None", "Nollie Inward"],
+    ["Fakie", "Bs", "180", "Heelflip", "1", "None", "None", "Fakie Inward"],
+    ["Fakie", "Fs", "180", "Heelflip", "1", "Fs", "180", "Rickflip / Fakie Big Heel"]
+]

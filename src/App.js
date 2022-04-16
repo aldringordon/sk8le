@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Board from './components/Board';
+import Search from './components/Search';
+import { createContext, useState } from 'react';
+import { boardDefault } from './Words';
+export const AppContext = createContext();
+
+// https://www.youtube.com/watch?v=WDTNwmXUz2c&t=240s
 
 function App() {
+
+  const[board, setBoard] = useState(boardDefault);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <nav>
+        <h1>Sk8le</h1>
+      </nav>
+
+      <AppContext.Provider value={{ board, setBoard}}>
+        <div className="game">
+          <Board />
+          <Search />
+        </div>
+        
+      </AppContext.Provider>
+
     </div>
   );
 }

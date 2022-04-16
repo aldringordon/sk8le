@@ -1,7 +1,0 @@
-[
-    {"stance":"Regular", "shuv":"None", "shuvRotation":"None", "flip":"Kickflip", "flipAmount":"1", "spin":"None", "spinRotation":"None", "trickName":"Kickflip"},
-    {"stance":"Regular", "shuv":"None", "shuvRotation":"None", "flip":"Heelflip", "flipAmount":"1", "spin":"None", "spinRotation":"None", "trickName":"Heelflip"},
-    {"stance":"Regular", "shuv":"None", "shuvRotation":"None", "flip":"Heelflip", "flipAmount":"1", "spin":"None", "spinRotation":"None", "trickName":"test1"},
-    {"stance":"Regular", "shuv":"None", "shuvRotation":"None", "flip":"Heelflip", "flipAmount":"1", "spin":"None", "spinRotation":"None", "trickName":"test2"},
-    {"stance":"Regular", "shuv":"None", "shuvRotation":"None", "flip":"Heelflip", "flipAmount":"1", "spin":"None", "spinRotation":"None", "trickName":"test3"}
-]

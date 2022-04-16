@@ -36,6 +36,16 @@ nav h1 {
   flex-direction: column;
 }
 
+.App input {
+  background-color: #121212;
+  margin: 20px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid grey;
+}
+
 .board {
   width: 800px;
   height: 400px;
@@ -139,3 +149,4 @@ nav h1 {
 #disabled {
   background-color: #3a393c;
 }
+

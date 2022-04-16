@@ -3,7 +3,7 @@ import { AppContext } from "../App";
 
 function Letter({ letterPos, attemptVal }) {
 
-    const { board, setBoard } = useContext(AppContext);
+    const { board } = useContext(AppContext);
     const letter = board[attemptVal][letterPos];
 
   return (

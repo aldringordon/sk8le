@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import Select, { makeAnimated } from 'react-select';
+import React, { useContext } from 'react';
+import Select from 'react-select';
 import { tricks } from '../Tricks';
 import { AppContext } from "../App";
 import { trickData } from '../TrickData';

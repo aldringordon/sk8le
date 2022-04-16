@@ -3,7 +3,7 @@ import { AppContext } from "../App";
 
 function Guess({ guessPos, attemptVal }) {
 
-    const { board, setBoard } = useContext(AppContext);
+    const { board } = useContext(AppContext);
     const guess = board[attemptVal][guessPos];
 
   return (

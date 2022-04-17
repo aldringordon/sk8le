@@ -7,7 +7,7 @@ import { trickData } from '../TrickData';
 function Search() {
 
     const green = "🟩";
-    const red = "🟥";
+    const yellow = "🟨";
     const eyes = "👀";
     const cool = "😎";
     const cry = "😢";
@@ -36,7 +36,7 @@ function Search() {
             }
             else if (boardRow[i] === "❌")
             {
-                line += red + " ";
+                line += yellow + " ";
             }
         }
 

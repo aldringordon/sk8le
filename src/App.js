@@ -12,14 +12,19 @@ export const AppContext = createContext();
 function App() {
   
   function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+    var date1 = new Date("04/15/2022");
+    var date2 = new Date();
+    var daysPassed = Math.floor((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
+    console.log("dayspassed: " + daysPassed);
+    var number = Math.floor(Math.PI * 0.1241353565371482 * max * daysPassed);
+    return number % max;
   }
 
   const[board, setBoard] = useState(boardDefault);
   const[shareBoard, setShareBoard] = useState(shareBoardDefault)
   const[currAttempt, setCurrAttempt] = useState({attempt: 1});
-  //const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
-  const[answer] = useState({answer: trickData[0]})
+  const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
+  //const[answer] = useState({answer: trickData[0]})
   const[answerStr, setAnswerStr] = useState({answerString: " "});
 
   return (
@@ -35,18 +40,20 @@ function App() {
 
         <div className="game">
 
-          <ShareBoard />
+          <div className="answerString">
+            {answerStr.answerString}
+          </div>
 
           <div className="search">
             <Search />
           </div>
 
-          <div className="answerString">
-            {answerStr.answerString}
-          </div>
+          
 
           <Board />
 
+          <ShareBoard />
+          
         </div>
         
       </AppContext.Provider>

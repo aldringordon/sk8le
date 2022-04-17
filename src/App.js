@@ -27,12 +27,15 @@ function App() {
 
       <AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, answer}}>
  
-      <div className="search">
-        <Search />
-      </div>
+      
 
 
         <div className="game">
+
+          <div className="search">
+            <Search />
+          </div>
+
           <Board />
         </div>
         

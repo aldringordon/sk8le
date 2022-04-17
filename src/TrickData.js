@@ -3,7 +3,7 @@ export const trickData = [
     {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Heelflip"},
     {stance:"Regular",  shuv:"Bs",      shuvRotation:"360", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Tre / 360 flip"},
     {stance:"Nollie",   shuv:"Fs",      shuvRotation:"180", flip:"Heelflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Nollie Inward Heel"},
-    {stance:"Fakie",    shuv:"Fs",      shuvRotation:"180", flip:"Heelflip",    flipAmount:"1",     spin:"Fs",      spinRotation:"180", trickName:"Rick Flip / Fakie Big Heel"},
+    {stance:"Fakie",    shuv:"Fs",      shuvRotation:"180", flip:"Heelflip",    flipAmount:"1",     spin:"Fs",      spinRotation:"180", trickName:"Fakie Big Heel"},
     {stance:"Regular",  shuv:"Bs",      shuvRotation:"180", flip:"Kickflip",    flipAmount:"1",     spin:"Bs",      spinRotation:"180", trickName:"Bigflip"},
     {stance:"Nollie",   shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Nollie Flip"},
     {stance:"Nollie",   shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Nollie Heel"},

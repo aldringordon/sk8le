@@ -26,6 +26,7 @@ function Search() {
             newBoard[currAttempt.attempt][6] = "✅";
             newBoard[currAttempt.attempt][7] = guess.label;
             setBoard(newBoard);
+            setAnswerStr({...answerStr, answerString: answer.answer.trickName});
         }
         else
         {
@@ -120,7 +121,6 @@ function Search() {
         }
         else
         {
-            console.log("end");
             setAnswerStr({...answerStr, answerString: answer.answer.trickName});
         }
 

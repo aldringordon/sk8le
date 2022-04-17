@@ -1,8 +1,9 @@
 import './App.css';
 import Board from './components/Board';
 import Search from './components/Search';
+import ShareBoard from './components/ShareBoard';
 import { createContext, useState } from 'react';
-import { boardDefault } from './Words';
+import { boardDefault, shareBoardDefault } from './Words';
 import { trickData } from './TrickData';
 export const AppContext = createContext();
 
@@ -15,8 +16,10 @@ function App() {
   }
 
   const[board, setBoard] = useState(boardDefault);
+  const[shareBoard, setShareBoard] = useState(shareBoardDefault)
   const[currAttempt, setCurrAttempt] = useState({attempt: 1});
-  const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
+  //const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
+  const[answer] = useState({answer: trickData[0]})
   const[answerStr, setAnswerStr] = useState({answerString: " "});
 
   return (
@@ -26,21 +29,24 @@ function App() {
         <h1>Sk8le</h1>
       </nav>
 
-      <AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, answer, answerStr, setAnswerStr}}>
+      <AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, answer, answerStr, setAnswerStr, shareBoard, setShareBoard}}>
 
       
 
         <div className="game">
 
-          <div className="answerString">
-            {answerStr.answerString}
-          </div>
+          <ShareBoard />
 
           <div className="search">
             <Search />
           </div>
 
+          <div className="answerString">
+            {answerStr.answerString}
+          </div>
+
           <Board />
+
         </div>
         
       </AppContext.Provider>

@@ -1,25 +1,10 @@
 import React, { useContext } from 'react';
 import { AppContext } from "../App";
+import CopyButton from './CopyButton';
 
 function ShareBoard() {
 
     const { shareBoard } = useContext(AppContext);
-
-    const copyToClipboard = () => {
-        var text = shareBoard[0] + "\n";
-
-        for (let i = 1; i < 7; i++)
-        {
-            if (shareBoard[i] !== "")
-            {
-                text += shareBoard[i] + "\n";
-            }
-        }
-
-        navigator.clipboard.writeText(
-            text
-        )
-    }
 
   return (
     <div className="answerString">
@@ -32,9 +17,7 @@ function ShareBoard() {
         <form>{shareBoard[6]}</form>
 
         <div className="button" >
-            <button onClick={copyToClipboard}>
-                Copy to Clipboard
-            </button>
+            <CopyButton />
         </div>
     </div>
     

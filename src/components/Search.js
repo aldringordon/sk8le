@@ -180,7 +180,7 @@ function Search() {
             evaluate(trick);
             setBoard(newBoard);
         }
-        if (currAttempt.attempt > 5)
+        if (currAttempt.attempt > 5 && currAttempt.attempt < 8)
         {
             setAnswerStr({...answerStr, answerString: answer.answer.trickName});
             if (trick.label === answer.answer.trickName)

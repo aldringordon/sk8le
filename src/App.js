@@ -95,14 +95,15 @@ function App() {
 
           <ShareBoard />
           
+          <div className="credits">
+            <form>Developer: Aldrin Gordon</form>
+            <form>Quality Assurance: Joseph Gleason</form>
+          </div>
         </div>
         
       </AppContext.Provider>
 
-      <div className="credits">
-          <form>Developer: Aldrin Gordon</form>
-          <form>Quality Assurance: Joseph Gleason</form>
-      </div>
+      
 
     </div>
   );

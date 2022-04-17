@@ -27,12 +27,12 @@ function Search() {
             newBoard[currAttempt.attempt][7] = guess.label;
             setBoard(newBoard);
             setAnswerStr({...answerStr, answerString: answer.answer.trickName});
+            setCurrAttempt({...currAttempt, attempt: 8});
         }
         else
         {
             const guessTrick = trickData[guess.value]
             const newBoard = [...board];
-
             if (guessTrick.stance === answer.answer.stance)
             {
                 newBoard[currAttempt.attempt][0] = "✅";
@@ -98,16 +98,13 @@ function Search() {
 
             newBoard[currAttempt.attempt][7] = guess.label;
             setBoard(newBoard);
+            setCurrAttempt({...currAttempt, attempt: currAttempt.attempt + 1});
         }
     }
 
     const setTrick = (trick) => {
 
-        console.log(trick.label);
         console.log(currAttempt.attempt);
-        console.log(answerStr.answerString)
-        console.log(answer.answer.trickName)
-        console.log(currAttempt.attempt)
 
         const newBoard = [...board];
 
@@ -115,7 +112,6 @@ function Search() {
         {
             newBoard[currAttempt.attempt][7] = trick.label;
             evaluate(trick);
-            setCurrAttempt({...currAttempt, attempt: currAttempt.attempt + 1});
             setBoard(newBoard);
         }
         else
@@ -123,6 +119,7 @@ function Search() {
             setAnswerStr({...answerStr, answerString: answer.answer.trickName});
         }
 
+        console.log(currAttempt.attempt)
         onClear();
     }
 

@@ -101,8 +101,7 @@ function Search() {
         }
     }
 
-    const setTrick = (trick, actionMeta) => {
-        
+    const setTrick = (trick) => {
 
         console.log(trick.label);
         console.log(currAttempt.attempt);
@@ -147,8 +146,3 @@ function Search() {
 }
 
 export default Search
-
-//https://www.youtube.com/watch?v=mZvKPtH9Fzo  
-
-
-// <input type="text" placeholder="Search..." /> 

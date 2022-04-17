@@ -16,6 +16,8 @@ function CopyButton() {
             }
         }
 
+        text += "https://sk8le.netlify.app";
+
         navigator.clipboard.writeText(
             text
         )

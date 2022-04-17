@@ -15,6 +15,7 @@ function ShareBoard() {
         <form>{shareBoard[4]}</form>
         <form>{shareBoard[5]}</form>
         <form>{shareBoard[6]}</form>
+        <form>https://sk8le.netlify.app</form>
 
         <div className="button" >
             <CopyButton />

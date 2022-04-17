@@ -15,7 +15,6 @@ function App() {
     var date1 = new Date("04/15/2022");
     var date2 = new Date();
     var daysPassed = Math.floor((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
-    console.log("dayspassed: " + daysPassed);
     var number = Math.floor(Math.PI * 0.1241353565371482 * max * daysPassed);
     return number % max;
   }

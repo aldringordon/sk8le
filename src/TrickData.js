@@ -1,7 +1,7 @@
 export const trickData = [
     {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Kickflip"},
     {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Heelflip"},
-    {stance:"Regular",  shuv:"Bs",      shuvRotation:"360", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"360 flip"},
+    {stance:"Regular",  shuv:"Bs",      shuvRotation:"360", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Tre / 360 flip"},
     {stance:"Nollie",   shuv:"Fs",      shuvRotation:"180", flip:"Heelflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Nollie Inward Heel"},
     {stance:"Fakie",    shuv:"Fs",      shuvRotation:"180", flip:"Heelflip",    flipAmount:"1",     spin:"Fs",      spinRotation:"180", trickName:"Rick Flip / Fakie Big Heel"},
     {stance:"Regular",  shuv:"Bs",      shuvRotation:"180", flip:"Kickflip",    flipAmount:"1",     spin:"Bs",      spinRotation:"180", trickName:"Bigflip"},
@@ -20,5 +20,6 @@ export const trickData = [
     {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"1",     spin:"Fs",      spinRotation:"180", trickName:"Fs Flip"},
     {stance:"Regular",  shuv:"Fs",      shuvRotation:"180", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Hardflip"},
     {stance:"Switch",   shuv:"Bs",      shuvRotation:"180", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Switch Varial"},
-    {stance:"Regular",  shub:"Bs",      shuvRotaiton:"180", flip:"Kickflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Nightmare Flip"},
+    {stance:"Regular",  shuv:"Bs",      shuvRotaiton:"180", flip:"Kickflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Nightmare Flip"},
+    {stance:"Nollie",   shuv:"Bs",      shuvRotation:"180", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"Nollie Hardflip"},
 ]

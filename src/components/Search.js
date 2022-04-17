@@ -7,6 +7,17 @@ import { trickData } from '../TrickData';
 function Search() {
 
     const { board, setBoard, currAttempt, setCurrAttempt, answer } = useContext(AppContext);
+    const openMenu = false;
+
+    const handleInputChange = ({ action }) => {
+        if (action === "input-change") {
+            this.setState({ openMenu: true});
+        }
+    };
+
+    const hideMenu = () => {
+        this.setState({ openMenu: false});
+    };
 
     const evaluate = (guess) => {
         if (guess.label === answer.answer.trickName)
@@ -96,6 +107,8 @@ function Search() {
     }
 
     const setTrick = (trick) => {
+        
+
         console.log(trick.label);
         console.log(currAttempt.attempt);
 
@@ -109,7 +122,13 @@ function Search() {
 
         setCurrAttempt({...currAttempt, attempt: currAttempt.attempt + 1});
         setBoard(newBoard);
+
+        hideMenu();
     }
+
+    
+
+    
 
   return (
       
@@ -117,9 +136,15 @@ function Search() {
 
         <Select
             placeholder="🛹 Search 🔎"
+            arrowRendered={null}
+            openMenuOnFocus={false}
+            openMenuOnClick={false}
             isSearchable
             options={tricks}
+            inInputChange={handleInputChange}
             onChange={setTrick}
+            menuIsOepn={openMenu}
+            onBlur={hideMenu}
         />
         
     </div>

@@ -2,12 +2,11 @@ import './App.css';
 import Board from './components/Board';
 import Search from './components/Search';
 import ShareBoard from './components/ShareBoard';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { boardDefault, shareBoardDefault } from './Words';
 import { trickData } from './TrickData';
-export const AppContext = createContext();
 
-// https://www.youtube.com/watch?v=WDTNwmXUz2c&t=240s
+export const AppContext = createContext("");
 
 function App() {
   
@@ -21,10 +20,53 @@ function App() {
 
   const[board, setBoard] = useState(boardDefault);
   const[shareBoard, setShareBoard] = useState(shareBoardDefault)
+
   const[currAttempt, setCurrAttempt] = useState({attempt: 1});
+
   const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
-  //const[answer] = useState({answer: trickData[0]})
   const[answerStr, setAnswerStr] = useState({answerString: " "});
+
+  const today = new Date().toISOString().split('T')[0];
+  const[lastDate, setLastDate] = useState(today);
+  
+  if (lastDate !== new Date().toISOString().split('T')[0])
+    {
+      setBoard(boardDefault);
+      setShareBoard(shareBoardDefault);
+      setCurrAttempt({attempt: 1});
+      setAnswerStr({answerString: " "});
+      setLastDate(new Date().toISOString().split('T')[0]);
+    }
+
+  useEffect(() => {
+    
+    const savedBoard = JSON.parse(localStorage.getItem("savedBoard"));
+    if (savedBoard) setBoard(savedBoard);
+
+    const savedShaeBoard = JSON.parse(localStorage.getItem("savedShareBoard"));
+    if (savedShaeBoard) setShareBoard(savedShaeBoard);
+    
+    const savedCurrAttempt = JSON.parse(localStorage.getItem("savedCurrAttempt"));
+    if (savedCurrAttempt) setCurrAttempt(savedCurrAttempt);
+
+    const savedAnswerStr = JSON.parse(localStorage.getItem("savedAnswerStr"));
+    if (savedAnswerStr) setAnswerStr(savedAnswerStr); 
+
+    const savedLastDate = JSON.parse(localStorage.getItem("savedLastDate"));
+    if (savedLastDate) setLastDate(savedLastDate); 
+    
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("savedBoard", JSON.stringify(board));
+    localStorage.setItem("savedShareBoard", JSON.stringify(shareBoard));
+    localStorage.setItem("savedCurrAttempt", JSON.stringify(currAttempt));
+    localStorage.setItem("savedAnswerStr", JSON.stringify(answerStr));
+    localStorage.setItem("savedLastDate", JSON.stringify(lastDate));
+
+  }, [board, shareBoard, currAttempt, answerStr, lastDate]);
+
+
 
   return (
     <div className="App">

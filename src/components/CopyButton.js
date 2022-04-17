@@ -1,6 +1,10 @@
 import React, { useContext } from 'react'
 import { AppContext } from "../App";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
+
 function CopyButton() {
 
     const { shareBoard } = useContext(AppContext);
@@ -21,6 +25,8 @@ function CopyButton() {
         navigator.clipboard.writeText(
             text
         )
+
+        toast("Copied to clipboard! 😏", {position: toast.POSITION.TOP_CENTER, autoClose: 2000, theme: "light", hideProgressBar: true})
     }
 
   return (

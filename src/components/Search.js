@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import Select from 'react-select';
 import { tricks } from '../Tricks';
 import { AppContext } from "../App";
@@ -6,18 +6,12 @@ import { trickData } from '../TrickData';
 
 function Search() {
 
-    const { board, setBoard, currAttempt, setCurrAttempt, answer } = useContext(AppContext);
-    const openMenu = false;
+    const selectInputRef = useRef(null);
+    const onClear = () => {
+            selectInputRef.current.select.clearValue();
+      };
 
-    const handleInputChange = ({ action }) => {
-        if (action === "input-change") {
-            this.setState({ openMenu: true});
-        }
-    };
-
-    const hideMenu = () => {
-        this.setState({ openMenu: false});
-    };
+    const { board, setBoard, currAttempt, setCurrAttempt, answer, answerStr, setAnswerStr } = useContext(AppContext);
 
     const evaluate = (guess) => {
         if (guess.label === answer.answer.trickName)
@@ -106,11 +100,14 @@ function Search() {
         }
     }
 
-    const setTrick = (trick) => {
+    const setTrick = (trick, actionMeta) => {
         
 
         console.log(trick.label);
         console.log(currAttempt.attempt);
+        console.log(answerStr.answerString)
+        console.log(answer.answer.trickName)
+        console.log(currAttempt.attempt)
 
         const newBoard = [...board];
 
@@ -118,33 +115,32 @@ function Search() {
         {
             newBoard[currAttempt.attempt][7] = trick.label;
             evaluate(trick);
+            setCurrAttempt({...currAttempt, attempt: currAttempt.attempt + 1});
+            setBoard(newBoard);
+        }
+        else
+        {
+            console.log("end");
+            setAnswerStr({...answerStr, answerString: answer.answer.trickName});
         }
 
-        setCurrAttempt({...currAttempt, attempt: currAttempt.attempt + 1});
-        setBoard(newBoard);
-
-        hideMenu();
+        onClear();
     }
-
-    
-
-    
 
   return (
       
     <div className="select">
 
         <Select
+            
             placeholder="🛹 Search 🔎"
             arrowRendered={null}
             openMenuOnFocus={false}
             openMenuOnClick={false}
             isSearchable
             options={tricks}
-            inInputChange={handleInputChange}
             onChange={setTrick}
-            menuIsOepn={openMenu}
-            onBlur={hideMenu}
+
         />
         
     </div>

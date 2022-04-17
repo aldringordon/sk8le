@@ -16,7 +16,8 @@ function App() {
 
   const[board, setBoard] = useState(boardDefault);
   const[currAttempt, setCurrAttempt] = useState({attempt: 1});
-  const[answer] = useState({answer: trickData[getRandomInt(16)]})
+  const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
+  const[answerStr, setAnswerStr] = useState({answerString: " "});
 
   return (
     <div className="App">
@@ -25,12 +26,15 @@ function App() {
         <h1>Sk8le</h1>
       </nav>
 
-      <AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, answer}}>
- 
+      <AppContext.Provider value={{ board, setBoard, currAttempt, setCurrAttempt, answer, answerStr, setAnswerStr}}>
+
       
 
-
         <div className="game">
+
+          <div className="answerString">
+            {answerStr.answerString}
+          </div>
 
           <div className="search">
             <Search />

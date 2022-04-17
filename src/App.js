@@ -26,16 +26,16 @@ function App() {
   const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
   const[answerStr, setAnswerStr] = useState({answerString: " "});
 
-  const today = new Date().toISOString().split('T')[0];
+  const today = console.log(new Date(Date.now()).toLocaleString().split(',')[0]);
   const[lastDate, setLastDate] = useState(today);
-  
-  if (lastDate !== new Date().toISOString().split('T')[0])
+
+  if (lastDate !== console.log(new Date(Date.now()).toLocaleString().split(',')[0]))
     {
       setBoard(boardDefault);
       setShareBoard(shareBoardDefault);
       setCurrAttempt({attempt: 1});
       setAnswerStr({answerString: " "});
-      setLastDate(new Date().toISOString().split('T')[0]);
+      setLastDate(console.log(new Date(Date.now()).toLocaleString().split(',')[0]));
     }
 
   useEffect(() => {

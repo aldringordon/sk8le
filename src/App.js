@@ -26,16 +26,18 @@ function App() {
   const[answer] = useState({answer: trickData[getRandomInt(trickData.length-1)]})
   const[answerStr, setAnswerStr] = useState({answerString: " "});
 
-  const today = console.log(new Date(Date.now()).toLocaleString().split(',')[0]);
+  const today = new Date(Date.now()).toLocaleString().split(',')[0];
   const[lastDate, setLastDate] = useState(today);
 
-  if (lastDate !== console.log(new Date(Date.now()).toLocaleString().split(',')[0]))
+  console.log(new Date(Date.now()).toLocaleString().split(',')[0]);
+
+  if (lastDate !== new Date(Date.now()).toLocaleString().split(',')[0])
     {
       setBoard(boardDefault);
       setShareBoard(shareBoardDefault);
       setCurrAttempt({attempt: 1});
       setAnswerStr({answerString: " "});
-      setLastDate(console.log(new Date(Date.now()).toLocaleString().split(',')[0]));
+      setLastDate(new Date(Date.now()).toLocaleString().split(',')[0]);
     }
 
   useEffect(() => {
@@ -52,8 +54,23 @@ function App() {
     const savedAnswerStr = JSON.parse(localStorage.getItem("savedAnswerStr"));
     if (savedAnswerStr) setAnswerStr(savedAnswerStr); 
 
-    const savedLastDate = JSON.parse(localStorage.getItem("savedLastDate"));
-    if (savedLastDate) setLastDate(savedLastDate); 
+    const savedLastDate = localStorage.getItem("savedLastDate");
+    if (typeof savedLastDate !== 'undefined' && savedLastDate) 
+    {
+      try
+      {
+        setLastDate(JSON.parse(savedLastDate));
+      }
+      catch (error)
+      {
+        setLastDate("");
+      }
+      
+    }
+    else
+    {
+      setLastDate("");
+    }
     
   }, []);
 

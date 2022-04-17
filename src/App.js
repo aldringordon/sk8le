@@ -81,6 +81,8 @@ function App() {
 
         <div className="game">
 
+        <ShareBoard />
+
           <div className="answerString">
             {answerStr.answerString}
           </div>
@@ -93,7 +95,7 @@ function App() {
 
           <Board />
 
-          <ShareBoard />
+          
           
           <div className="credits">
             <form>Developer: Aldrin Gordon</form>

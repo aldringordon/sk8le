@@ -132,7 +132,6 @@ function Search() {
     <div className="select">
 
         <Select
-            
             placeholder="🛹 Search 🔎"
             arrowRendered={null}
             openMenuOnFocus={false}
@@ -140,7 +139,7 @@ function Search() {
             isSearchable
             options={tricks}
             onChange={setTrick}
-
+            components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }}
         />
         
     </div>

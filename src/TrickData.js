@@ -1,4 +1,5 @@
 export const trickData = [
+    {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"None",    flipAmount:"0",     spin:"None",    spinRotation:"0",   trickName:"Ollie"},
     {stance:"Regular",  shuv:"Bs",    shuvRotation:"180",   flip:"None",    flipAmount:"0",     spin:"None",    spinRotation:"0",   trickName:"Pop Shuv"},
     {stance:"Regular",  shuv:"Fs",    shuvRotation:"180",   flip:"None",    flipAmount:"0",     spin:"None",    spinRotation:"0",   trickName:"Fs Shuv"},
     {stance:"Regular",  shuv:"Bs",    shuvRotation:"360",   flip:"None",    flipAmount:"0",     spin:"None",    spinRotation:"0",   trickName:"3 Shuv"},

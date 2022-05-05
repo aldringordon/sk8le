@@ -116,7 +116,7 @@ function App() {
           
           <div className="credits">
             <form>Developer: Aldrin Gordon</form>
-            <form>Quality Assurance: Joseph Gleason</form>
+            <form>Quality Control: Joseph Gleason, Josh Capponi</form>
           </div>
         </div>
         

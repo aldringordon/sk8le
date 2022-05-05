@@ -1,5 +1,5 @@
 export const boardDefault = [
-    ["Stance", "Shuv Rotation", "Shuv Amount", "Flip", "Flip Amount", "Body Rotation", "Rotation Amount", "Trick"],
+    ["Stance", "Shuv Direction", "Shuv Amount", "Flip", "Flip Amount", "Body Rotation", "Rotation Amount", "Trick"],
     ["", "", "", "", "", "", "", ""],
     ["", "", "", "", "", "", "", ""],
     ["", "", "", "", "", "", "", ""],

@@ -28,6 +28,7 @@ export const trickData = [
     {stance:"Regular",  shuv:"Bs",      shuvRotaiton:"180", flip:"Kickflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Nightmare Flip"},
     {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Double Flip"},
     {stance:"Regular",  shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Double Heel"},
+    {stance:"Regular",  shuv:"Bs",      shuvRotation:"540", flip:"Kickflip",    flipAmount:"1",     spin:"None",    spinRotation:"0",   trickName:"540 Flip"},
 
     {stance:"Nollie",  shuv:"None",    shuvRotation:"0",   flip:"None",    flipAmount:"0",     spin:"None",    spinRotation:"0",   trickName:"Nollie"},
     {stance:"Nollie",  shuv:"None",    shuvRotation:"0",   flip:"None",    flipAmount:"0",     spin:"Fs",    spinRotation:"180",   trickName:"Nollie Fs 180"},
@@ -57,6 +58,9 @@ export const trickData = [
 
     {stance:"Nollie",  shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Nollie Double Flip"},
     {stance:"Nollie",  shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"2",     spin:"None",    spinRotation:"0",   trickName:"Nollie Double Heel"},
+
+    {stance:"Nollie",  shuv:"None",    shuvRotation:"0",   flip:"Kickflip",    flipAmount:"3",     spin:"None",    spinRotation:"0",   trickName:"Nollie Triple Flip"},
+    {stance:"Nollie",  shuv:"None",    shuvRotation:"0",   flip:"Heelflip",    flipAmount:"3",     spin:"None",    spinRotation:"0",   trickName:"Nollie Triple Heel"},
 
     {stance:"Fakie",  shuv:"None",    shuvRotation:"0",   flip:"None",    flipAmount:"0",     spin:"None",    spinRotation:"0",   trickName:"Fakie Ollie"},
     {stance:"Fakie",  shuv:"None",    shuvRotation:"0",   flip:"None",    flipAmount:"0",     spin:"Bs",    spinRotation:"180",   trickName:"Half Cab"},

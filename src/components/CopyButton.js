@@ -20,7 +20,7 @@ function CopyButton() {
             }
         }
 
-        text += "https://sk8le.netlify.app";
+        text += "https://sk8le.vercel.app";
 
         navigator.clipboard.writeText(
             text
